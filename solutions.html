@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solutions: UI Problems We Fix | Zemgeez Studio</title>
+<meta name="description" content="See common UI problems like heavy video carousels, jumping layouts and add-to-cart reloads, and how we solve them, animated side by side.">
+<meta name="theme-color" content="#0b0b12">
+<meta property="og:title" content="Solutions: UI Problems We Fix | Zemgeez Studio">
+<meta property="og:description" content="See common UI problems like heavy video carousels, jumping layouts and add-to-cart reloads, and how we solve them, animated side by side.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237828c8'/%3E%3Cstop offset='1' stop-color='%23006fee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M9 10h14l-14 12h14' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="no-js">
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Zemgeez Studio home"><b>Z</b>Zemgeez</a>
+    <nav class="links" aria-label="Main"><a href="index.html#services">Services</a><a href="work/index.html">Work</a><a href="solutions.html" class=on aria-current=page>Solutions</a><a href="index.html#components">Components</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a></nav>
+    <div class="nav-r">
+      <button class="icon-btn" id="theme" aria-label="Toggle dark mode">
+        <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary btn-sm">Start a project</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile"><a href="index.html#services">Services</a><a href="work/index.html">Work</a><a href="solutions.html">Solutions</a><a href="index.html#components">Components</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact" class="btn btn-primary" style="margin-top:14px;color:#fff;border:0">Start a project</a>
+  </div>
+</header>
+<main>
+<section class="hero center" style="padding-bottom:30px">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <span class="eyebrow"><i></i> Solutions</span>
+    <h1 style="font-size:clamp(36px,5.6vw,62px)">Old UI problems, <span class="grad">solved and animated.</span></h1>
+    <p class="lead">Three common interface problems that quietly cost businesses sales. On the left, the old way. On the right, how we fix it. The demos only play while they're on screen.</p>
+    <div class="hero-cta"><a href="#video-carousel" class="btn btn-ghost">Video carousel</a><a href="#layout-shift" class="btn btn-ghost">Jumping layouts</a><a href="#add-to-cart" class="btn btn-ghost">Add to cart</a></div>
+  </div>
+</section>
+<section class="sol" id="video-carousel">
+  <div class="wrap">
+    <div class="sol-head rv"><div class="sol-num">01</div><div><h2>The heavy video carousel</h2><p>Video heroes look amazing, but the usual carousel loads every video the moment the page opens. On a phone that means a frozen screen, burned data and visitors leaving before the first frame plays.</p></div></div>
+    <div class="vs">
+      <div class="vs-col old rv"><div class="stage" role="img" aria-label="Animation: a carousel loading four videos at once, stuttering while a download bar fills to 48 MB">
+  <span class="stage-lbl">✕ Old way</span><span class="stage-stat">48 MB · ~9s</span><span class="frozen">● Page not responding</span>
+  <div class="vo-track">
+    <div class="vo-slide sound"><span class="sp"></span>Loading video 1 · 12 MB</div>
+    <div class="vo-slide"><span class="sp"></span>Loading video 2 · 12 MB</div>
+    <div class="vo-slide"><span class="sp"></span>Loading video 3 · 12 MB</div>
+    <div class="vo-slide"><span class="sp"></span>Loading video 4 · 12 MB</div>
+  </div>
+  <div class="vo-dots"><i></i><i></i><i></i><i></i></div>
+  <div class="vo-net"><div class="row"><span>Downloading 4 videos at once…</span><span>48 MB</span></div><div class="meter"><i></i></div></div>
+</div><h3><span style="color:var(--danger)">✕</span> Every video downloads at once</h3><p>Four or five clips autoplay together (sometimes with sound), the slider stutters, and the page can't respond to taps until the download finishes.</p></div>
+      <div class="vs-col new rv"><div class="stage" style="height:330px">
+  <span class="stage-lbl">✓ Our way · try it</span><span class="stage-stat" data-stat>1 video loaded · ~1.2 MB</span>
+  <div class="vc" data-carousel aria-roledescription="carousel" aria-label="Lightweight video carousel demo">
+    <div class="vc-track"><div class="vc-slide" style="--a:#34d399;--b:#0ea5e9"><div class="vid"></div><div class="hill"></div><span class="state">Poster only</span><div class="vc-cap">Summit sunrise<small>0:12</small></div><div class="prog"><i></i></div></div><div class="vc-slide" style="--a:#60a5fa;--b:#7828c8"><div class="vid"></div><div class="hill"></div><span class="state">Poster only</span><div class="vc-cap">River crossing<small>0:19</small></div><div class="prog"><i></i></div></div><div class="vc-slide" style="--a:#f59e0b;--b:#f31260"><div class="vid"></div><div class="hill"></div><span class="state">Poster only</span><div class="vc-cap">Desert night<small>0:26</small></div><div class="prog"><i></i></div></div><div class="vc-slide" style="--a:#22c55e;--b:#047857"><div class="vid"></div><div class="hill"></div><span class="state">Poster only</span><div class="vc-cap">Forest trail<small>0:33</small></div><div class="prog"><i></i></div></div></div>
+    <div class="vc-ctrl"><button class="arw" data-prev aria-label="Previous video"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button><div class="vc-dots"></div><button class="arw" data-next aria-label="Next video"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  </div>
+</div><h3><span style="color:var(--success)">✓</span> One video at a time, posters for the rest</h3><p>Only the slide you're looking at loads and plays. The others are tiny poster images. It pauses when you scroll away or hover. Swipe it, or use the arrows and dots.</p></div>
+    </div>
+    <div class="how"><div class="rv"><b>Poster first</b><span>A small image appears instantly while the video streams in the background.</span></div><div class="rv"><b>Load on demand</b><span>A video downloads only when its slide becomes active.</span></div><div class="rv"><b>Pause off-screen</b><span>Playback and autoplay stop when the carousel scrolls out of view.</span></div><div class="rv"><b>Native swipe</b><span>CSS scroll-snap gives smooth touch swiping with no slider library.</span></div></div>
+    <p class="used">Used in: <a href="work/nomad.html">Nomad Trail</a></p>
+  </div>
+</section><section class="sol" id="layout-shift">
+  <div class="wrap">
+    <div class="sol-head rv"><div class="sol-num">02</div><div><h2>Jumping layouts</h2><p>You go to tap a button and, at the last moment, an image or banner loads above it and pushes everything down. You tap the wrong thing. Google measures this as Cumulative Layout Shift (CLS) and ranks jumpy pages lower.</p></div></div>
+    <div class="vs">
+      <div class="vs-col old rv"><div class="stage" role="img" aria-label="Animation: a user goes to tap Buy now, but an ad and an image load late and push the button down, so they tap the ad">
+  <span class="stage-lbl">✕ Old way</span><span class="stage-stat">Content jumps</span>
+  <div class="scene"><div class="phone"><span class="notch"></span>
+      <div class="ls-h"><b></b><i></i></div>
+      <div class="ls-t"><i></i><i></i></div>
+      <div class="ls-ad">Ad · Download our app!</div>
+      <div class="ls-img"></div>
+      <div class="ls-btn">Buy now<span class="ok">✓ Added</span></div>
+      <svg class="cur ls-cur" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div></div>
+  <div class="toast-x bad ls-toast">Oops! Tapped the ad, not Buy</div>
+</div><h3><span style="color:var(--danger)">✕</span> Content loads late and shoves things around</h3><p>The page shows text first, then an ad and an image pop in with no space reserved. The Buy button moves just as the user taps, and they hit the ad.</p></div>
+      <div class="vs-col new rv"><div class="stage" role="img" aria-label="Animation: space for the image is reserved with a placeholder, so the Buy now button never moves and the tap works">
+  <span class="stage-lbl">✓ Our way</span><span class="stage-stat">Nothing moves</span>
+  <div class="scene"><div class="phone"><span class="notch"></span>
+      <div class="ls-h"><b></b><i></i></div>
+      <div class="ls-t"><i></i><i></i></div>
+      
+      <div class="ls-img"></div>
+      <div class="ls-btn">Buy now<span class="ok">✓ Added</span></div>
+      <svg class="cur ls-cur" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div></div>
+  <div class="toast-x good ls-toast">Tapped Buy. Nothing moved.</div>
+</div><h3><span style="color:var(--success)">✓</span> Space is reserved before anything loads</h3><p>The image area is held open from the start with a shimmering placeholder. When the photo arrives it fades in, and the button stays exactly where it was.</p></div>
+    </div>
+    <div class="how"><div class="rv"><b>Fixed aspect ratios</b><span>Every image and video has its width and height set, so its space is known up front.</span></div><div class="rv"><b>Skeleton placeholders</b><span>Grey shapes hold the layout and show that content is on its way.</span></div><div class="rv"><b>No surprise inserts</b><span>Banners and ads get reserved slots, or appear below what the user is reading.</span></div><div class="rv"><b>CLS monitoring</b><span>We check layout shift in Lighthouse and real-user data before launch.</span></div></div>
+    <p class="used">Used in: <a href="work/aurelia.html">Aurelia Skin</a>, <a href="work/brewline.html">Brewline Coffee</a>, <a href="work/pulse.html">Pulse Analytics</a></p>
+  </div>
+</section><section class="sol" id="add-to-cart">
+  <div class="wrap">
+    <div class="sol-head rv"><div class="sol-num">03</div><div><h2>Add to cart reloads the page</h2><p>On many stores, clicking "Add to cart" reloads the entire page. The screen goes blank, the shopper is thrown back to the top, and they have to find their place again. Every reload is a chance for them to give up.</p></div></div>
+    <div class="vs">
+      <div class="vs-col old rv"><div class="stage atc" role="img" aria-label="Animation: clicking Add to cart reloads the whole page, shows a spinner, and loses the scroll position">
+  <span class="stage-lbl">✕ Old way</span><span class="stage-stat">~2.8s wait</span>
+  <div class="scene"><div class="shop">
+      <div class="shop-h"><b></b><span class="cart-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 3H2"/></svg><em>1</em></span></div>
+      <div class="shop-b"><div class="pimg"></div><div class="pi"><i></i><i class="s"></i><i class="pr"></i><div class="atc-btn">Add to cart<span class="ok">✓ Added</span></div></div></div>
+      <div class="reload"><span class="sp"></span>Reloading page…</div>
+      <svg class="cur " viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div></div>
+  <div class="toast-x bad atc-toast">Page reloaded · scroll position lost</div>
+</div><h3><span style="color:var(--danger)">✕</span> A full page reload for one click</h3><p>The shopper taps Add to cart, waits through a white screen and spinner, then lands back at the top of the page with no clear sign that it worked.</p></div>
+      <div class="vs-col new rv"><div class="stage atc" role="img" aria-label="Animation: clicking Add to cart instantly confirms, the cart badge bumps and a cart drawer slides in without reloading">
+  <span class="stage-lbl">✓ Our way</span><span class="stage-stat">Instant · no reload</span>
+  <div class="scene"><div class="shop">
+      <div class="shop-h"><b></b><span class="cart-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6L5 3H2"/></svg><em>1</em></span></div>
+      <div class="shop-b"><div class="pimg"></div><div class="pi"><i></i><i class="s"></i><i class="pr"></i><div class="atc-btn">Add to cart<span class="ok">✓ Added</span></div></div></div>
+      <div class="drawer"><h4>Your cart (1)</h4><div class="it"><b></b><div><i></i><i style="width:36px"></i></div></div><div class="fs">₹320 away from free shipping</div><div class="meter"><i style="width:68%;background:var(--success)"></i></div><div class="co">Checkout</div></div>
+      <svg class="cur " viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div></div>
+  <div class="toast-x good atc-toast">Added in 0.1s · still on the page</div>
+</div><h3><span style="color:var(--success)">✓</span> Instant confirmation and a cart drawer</h3><p>The button confirms immediately, the cart badge bumps, and a drawer slides in showing the item and a free-shipping progress bar. The shopper never leaves the page.</p></div>
+    </div>
+    <div class="how"><div class="rv"><b>Cart API, no reload</b><span>Items are added in the background with Shopify's Ajax Cart API or a React state update.</span></div><div class="rv"><b>Instant feedback</b><span>The button, badge and a toast confirm the action in under 100 ms.</span></div><div class="rv"><b>Slide-out drawer</b><span>Review the cart, change quantities or check out from any page.</span></div><div class="rv"><b>Upsell moment</b><span>A free-shipping bar and recommendations encourage one more item.</span></div></div>
+    <p class="used">Used in: <a href="work/aurelia.html">Aurelia Skin</a>, <a href="work/nomad.html">Nomad Trail</a>, <a href="work/brewline.html">Brewline Coffee</a></p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="cta rv">
+      <div style="position:relative"><h2>Want results like this for your brand?</h2><p>Tell us about your store or website and we'll send a free audit with the fixes that will make the biggest difference.</p></div>
+      <div style="position:relative;display:flex;gap:12px;flex-wrap:wrap"><a href="index.html#contact" class="btn btn-white">Start a project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="solutions.html" class="btn" style="background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3)">See our solutions</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="index.html" class="logo"><b>Z</b>Zemgeez</a><p class="muted" style="margin-top:10px;max-width:320px;font-size:14px">Fast Shopify stores and React / Next.js websites, built from a component system that's easy to understand.</p></div>
+      <nav aria-label="Footer"><a href="index.html#services">Services</a><a href="work/index.html">Work</a><a href="solutions.html">Solutions</a><a href="index.html#components">Components</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></nav>
+    </div>
+    <p class="copy">© <span id="y">2026</span> Zemgeez Studio. All rights reserved.</p>
+  </div>
+</footer>
+<script src="assets/main.js" defer></script>
+</body>
+</html>

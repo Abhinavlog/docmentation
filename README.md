@@ -1,1 +1,1 @@
-# doc.gtihub.io
+# documentation/- ONLY
